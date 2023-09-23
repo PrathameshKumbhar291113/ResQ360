@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/warning_toast_layout"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:background="@drawable/round_corner_toast_warning"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/warningToastIv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_warning"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/warningToastText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/palate_titan_white" />
+
+    <TextView
+        android:id="@+id/warningToastText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Warning Toast"
+        android:textAlignment="center"
+        android:textColor="@color/palate_titan_white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/warningToastIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/warningToastIv"
+        app:layout_constraintTop_toTopOf="@id/warningToastIv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

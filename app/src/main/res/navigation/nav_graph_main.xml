@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.resq360.features.main.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.resq360.features.main.auth.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registerFragmentStep1"
+        android:name="com.resq360.features.main.auth.register.RegisterFragmentStep1"
+        android:label="fragment_register_step1"
+        tools:layout="@layout/fragment_register_step1" />
+    <fragment
+        android:id="@+id/registerFragmentStep2"
+        android:name="com.resq360.features.main.auth.register.RegisterFragmentStep2"
+        android:label="fragment_register_step2"
+        tools:layout="@layout/fragment_register_step2" />
+    <fragment
+        android:id="@+id/registerFragmentStep3"
+        android:name="com.resq360.features.main.auth.register.RegisterFragmentStep3"
+        android:label="fragment_register_step3"
+        tools:layout="@layout/fragment_register_step3" />
+    <fragment
+        android:id="@+id/registerFragmentStep4"
+        android:name="com.resq360.features.main.auth.register.RegisterFragmentStep4"
+        android:label="fragment_register_step4"
+        tools:layout="@layout/fragment_register_step4" />
+    <fragment
+        android:id="@+id/selectUserAgencyFragment"
+        android:name="com.resq360.features.main.onboarding.SelectUserAgencyFragment"
+        android:label="fragment_select_user_agency"
+        tools:layout="@layout/fragment_select_user_agency" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.resq360.features.main.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

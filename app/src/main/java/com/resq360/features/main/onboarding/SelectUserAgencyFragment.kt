@@ -32,7 +32,7 @@ class SelectUserAgencyFragment : Fragment() {
 
     private fun setupUi() {
         binding.agency.setOnClickListener {
-            findNavController().navigate(R.id.loginFragment)
+            findNavController().navigate(R.id.agencyLoginFragment)
         }
         binding.user.setOnClickListener {
             findNavController().navigate(R.id.userLoginFragment)

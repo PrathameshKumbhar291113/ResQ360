@@ -3,7 +3,7 @@
     <!-- Gray shadow. -->
     <item>
         <shape>
-            <solid android:color="@color/grey_dark" />
+            <solid android:color="#807D7E7F" />
             <corners android:radius="20dp" />
         </shape>
     </item>
@@ -15,7 +15,7 @@
         android:right=".3dp"
         android:top=".3dp">
         <shape>
-            <solid android:color="@color/grey" />
+            <solid android:color="#B2B6B7" />
             <corners android:radius="20dp" />
         </shape>
     </item>

@@ -10,9 +10,9 @@
         android:id="@+id/titleWelcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="Welcome !!!"
+        android:text="Welcome!"
         android:textAlignment="center"
         android:textColor="@color/palate_big_stone"
         android:textSize="30dp"
@@ -24,7 +24,7 @@
         android:id="@+id/titleLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/montserrat_semibold"
         android:text="Login"
         android:textAlignment="center"
@@ -37,7 +37,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/loginCard"
         android:layout_width="350dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:elevation="3dp"
         app:cardCornerRadius="20dp"
@@ -56,8 +56,8 @@
                 android:id="@+id/agencyIdTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="35dp"
                 android:fontFamily="@font/montserrat_semibold"
                 android:text="Agency Id"
                 android:textColor="@color/palate_big_stone"
@@ -67,19 +67,138 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/loginEmail_editText"
+                android:id="@+id/loginAgencyIdEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_white_corner_5dp"
+                android:elevation="7dp"
                 android:hint="Enter Agency Id"
                 android:inputType="textEmailAddress"
-                android:padding="1dp"
-                android:layout_marginTop="8dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
                 android:textColor="@color/palate_big_stone"
+                android:textColorHint="@color/very_dark_blue"
                 app:layout_constraintEnd_toEndOf="@+id/agencyIdTitle"
-                app:layout_constraintStart_toStartOf="@+id/agencyIdTitle"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/agencyIdTitle" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/agencyPasswordTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Password"
+                android:textColor="@color/palate_big_stone"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loginAgencyIdEditText" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginPasswordEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_white_corner_5dp"
+                android:elevation="7dp"
+                android:hint="Enter Agency Password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:textColor="@color/palate_big_stone"
+                android:textColorHint="@color/very_dark_blue"
+                app:layout_constraintEnd_toEndOf="@+id/agencyPasswordTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/agencyPasswordTitle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/passwordInvisibleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:elevation="9dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/loginPasswordEditText"
+                app:layout_constraintEnd_toEndOf="@id/loginPasswordEditText"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="@id/loginPasswordEditText"
+                app:layout_constraintTop_toTopOf="@id/loginPasswordEditText"
+                app:srcCompat="@drawable/iv_visibility_off" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/passwordVisibleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:elevation="9dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/loginPasswordEditText"
+                app:layout_constraintEnd_toEndOf="@id/loginPasswordEditText"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="@id/loginPasswordEditText"
+                app:layout_constraintTop_toTopOf="@id/loginPasswordEditText"
+                app:srcCompat="@drawable/iv_visibility" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/forgotPasswordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_forgot_password"
+                android:textColor="@color/palate_big_stone"
+                app:layout_constraintBottom_toBottomOf="@+id/remeberMeCheckboxTextView"
+                app:layout_constraintEnd_toEndOf="@+id/loginPasswordEditText"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/loginPasswordEditText"
+                app:layout_constraintTop_toTopOf="@+id/remeberMeCheckboxTextView" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/remeberMeCheckboxTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/palate_big_stone"
+                android:text="Remember Me"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/palate_big_stone"
+                app:layout_constraintEnd_toEndOf="@+id/loginPasswordEditText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/loginPasswordEditText"
+                app:layout_constraintTop_toBottomOf="@+id/loginPasswordEditText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/shape_layer_button"
+                android:text="Log in"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/remeberMeCheckboxTextView" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/signupTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/new_to_resq360_sign_up"
+        android:textAlignment="center"
+        android:textColor="@color/grey_dark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginCard" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

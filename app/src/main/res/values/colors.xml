@@ -7,9 +7,11 @@
     <color name="teal">#7BFFF5</color>
     <color name="moderate_cyan">#55BEB7</color>
     <color name="grey">#B2B6B7</color>
+    <color name="grey_dark">#7D7E7F</color>
     <color name="very_dark_blue">#053b50</color>
     <color name="vivid_blue">#025CEF</color>
     <color name="strong_green">#4CB71A</color>
+    <color name="strong_dark_green">#266409</color>
     <color name="blackish_blue">#031D27</color>
 
     //extra color palette

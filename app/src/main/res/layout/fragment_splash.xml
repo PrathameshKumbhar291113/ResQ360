@@ -8,12 +8,12 @@
     tools:context=".features.main.splash.SplashFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="LOGO"
+        app:srcCompat="@drawable/iv_resq360_logo"
         android:textColor="@color/black"
-        android:textSize="50dp"
+        android:padding="50dp"
         android:gravity="center"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

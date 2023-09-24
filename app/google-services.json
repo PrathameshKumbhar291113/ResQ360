@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1046312563693",
+    "project_id": "resq360-69f13",
+    "storage_bucket": "resq360-69f13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046312563693:android:22753701ab95502193ede4",
+        "android_client_info": {
+          "package_name": "com.resq360"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAtov6D50WQs-hGwSDyOW3NefiVFS2L3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

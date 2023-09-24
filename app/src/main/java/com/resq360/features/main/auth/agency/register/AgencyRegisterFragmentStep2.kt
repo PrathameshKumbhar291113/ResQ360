@@ -1,16 +1,16 @@
-package com.resq360.features.main.auth.login
+package com.resq360.features.main.auth.agency.register
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.resq360.databinding.FragmentLoginBinding
+import com.resq360.databinding.FragmentAgencyRegisterStep2Binding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LoginFragment : Fragment() {
-    private lateinit var binding: FragmentLoginBinding
+class AgencyRegisterFragmentStep2 : Fragment() {
+    private lateinit var binding: FragmentAgencyRegisterStep2Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -18,8 +18,9 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentLoginBinding.inflate(inflater, container, false)
+    ): View? {
+        binding = FragmentAgencyRegisterStep2Binding.inflate(inflater, container, false)
         return binding.root
     }
+
 }

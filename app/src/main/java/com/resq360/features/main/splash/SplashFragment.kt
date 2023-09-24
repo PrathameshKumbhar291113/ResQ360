@@ -35,7 +35,7 @@ class SplashFragment : Fragment() {
     }
     private fun navigateToRespectedDestination() {
         lifecycleScope.launch {
-            delay(6000)
+            delay(3000)
             findNavController().navigate(R.id.selectUserAgencyFragment)
         }
     }

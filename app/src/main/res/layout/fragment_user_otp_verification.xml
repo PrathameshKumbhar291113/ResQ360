@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.main.auth.register.RegisterFragmentStep1">
+    tools:context=".features.main.auth.user.otp_verification.UserOtpVerificationFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

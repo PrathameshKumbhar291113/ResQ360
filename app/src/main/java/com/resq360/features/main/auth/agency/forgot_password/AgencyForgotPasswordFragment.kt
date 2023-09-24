@@ -1,16 +1,16 @@
-package com.resq360.features.main.home
+package com.resq360.features.main.auth.agency.forgot_password
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.resq360.databinding.FragmentHomeBinding
+import com.resq360.databinding.FragmentAgencyForgotPasswordBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment : Fragment() {
-    private lateinit var binding: FragmentHomeBinding
+class AgencyForgotPasswordFragment : Fragment() {
+    private lateinit var binding: FragmentAgencyForgotPasswordBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -19,7 +19,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View{
-        binding = FragmentHomeBinding.inflate(inflater,container,false)
+        binding = FragmentAgencyForgotPasswordBinding.inflate(inflater,container, false)
         return binding.root
     }
 }

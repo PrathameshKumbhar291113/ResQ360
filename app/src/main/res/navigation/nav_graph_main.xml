@@ -11,30 +11,30 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" />
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.resq360.features.main.auth.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        android:id="@+id/agencyLoginFragment"
+        android:name="com.resq360.features.main.auth.agency.login.AgencyLoginFragment"
+        android:label="fragment_agency_login"
+        tools:layout="@layout/fragment_agency_login" />
     <fragment
-        android:id="@+id/registerFragmentStep1"
-        android:name="com.resq360.features.main.auth.register.RegisterFragmentStep1"
-        android:label="fragment_register_step1"
-        tools:layout="@layout/fragment_register_step1" />
+        android:id="@+id/agencyRegisterFragmentStep1"
+        android:name="com.resq360.features.main.auth.agency.register.AgencyRegisterFragmentStep1"
+        android:label="fragment_agency_register_step1"
+        tools:layout="@layout/fragment_agency_register_step1" />
     <fragment
-        android:id="@+id/registerFragmentStep2"
-        android:name="com.resq360.features.main.auth.register.RegisterFragmentStep2"
-        android:label="fragment_register_step2"
-        tools:layout="@layout/fragment_register_step2" />
+        android:id="@+id/agencyRegisterFragmentStep2"
+        android:name="com.resq360.features.main.auth.agency.register.AgencyRegisterFragmentStep2"
+        android:label="fragment_agency_register_step2"
+        tools:layout="@layout/fragment_agency_register_step2" />
     <fragment
-        android:id="@+id/registerFragmentStep3"
-        android:name="com.resq360.features.main.auth.register.RegisterFragmentStep3"
-        android:label="fragment_register_step3"
-        tools:layout="@layout/fragment_register_step3" />
+        android:id="@+id/agencyRegisterFragmentStep3"
+        android:name="com.resq360.features.main.auth.agency.register.AgencyRegisterFragmentStep3"
+        android:label="fragment_agency_register_step3"
+        tools:layout="@layout/fragment_agency_register_step3" />
     <fragment
         android:id="@+id/registerFragmentStep4"
-        android:name="com.resq360.features.main.auth.register.RegisterFragmentStep4"
-        android:label="fragment_register_step4"
-        tools:layout="@layout/fragment_register_step4" />
+        android:name="com.resq360.features.main.auth.agency.register.AgencyRegisterFragmentStep4"
+        android:label="fragment_agency_register_step4"
+        tools:layout="@layout/fragment_agency_register_step4" />
     <fragment
         android:id="@+id/selectUserAgencyFragment"
         android:name="com.resq360.features.main.onboarding.SelectUserAgencyFragment"
@@ -45,4 +45,24 @@
         android:name="com.resq360.features.main.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/agencyForgotPasswordFragment"
+        android:name="com.resq360.features.main.auth.agency.forgot_password.AgencyForgotPasswordFragment"
+        android:label="fragment_agency_forgot_password"
+        tools:layout="@layout/fragment_agency_forgot_password" />
+    <fragment
+        android:id="@+id/userLoginFragment"
+        android:name="com.resq360.features.main.auth.user.login.UserLoginFragment"
+        android:label="fragment_user_login"
+        tools:layout="@layout/fragment_user_login" />
+    <fragment
+        android:id="@+id/userOtpVerificationFragment"
+        android:name="com.resq360.features.main.auth.user.otp_verification.UserOtpVerificationFragment"
+        android:label="fragment_user_otp_verification"
+        tools:layout="@layout/fragment_user_otp_verification" />
+    <fragment
+        android:id="@+id/userRegisterFragment"
+        android:name="com.resq360.features.main.auth.user.register.UserRegisterFragment"
+        android:label="fragment_user_register"
+        tools:layout="@layout/fragment_user_register" />
 </navigation>

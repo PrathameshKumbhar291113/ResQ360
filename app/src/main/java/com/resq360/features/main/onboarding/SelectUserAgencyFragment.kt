@@ -35,7 +35,7 @@ class SelectUserAgencyFragment : Fragment() {
             findNavController().navigate(R.id.loginFragment)
         }
         binding.user.setOnClickListener {
-            findNavController().navigate(R.id.homeFragment)
+            findNavController().navigate(R.id.userLoginFragment)
         }
     }
 

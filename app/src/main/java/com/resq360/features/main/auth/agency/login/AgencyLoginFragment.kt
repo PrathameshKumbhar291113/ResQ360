@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.resq360.R
 import com.resq360.databinding.FragmentAgencyLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -38,6 +40,10 @@ class AgencyLoginFragment : Fragment() {
 
     private fun setupUi() {
         togglePasswordButton()
+
+            binding.signupTextView.setOnClickListener {
+                findNavController().navigate(R.id.agencyRegisterFragmentStep1)
+            }
     }
 
     private fun togglePasswordButton() {

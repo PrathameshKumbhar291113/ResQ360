@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.resq360.R
 import com.resq360.databinding.FragmentAgencyRegisterStep4Binding
 
 class AgencyRegisterFragmentStep4 : Fragment() {
@@ -20,5 +22,21 @@ class AgencyRegisterFragmentStep4 : Fragment() {
     ): View{
         binding = FragmentAgencyRegisterStep4Binding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupUi()
+        setupObserver()
+    }
+
+    private fun setupObserver() {
+
+    }
+    private fun setupUi() {
+
+        binding.submitButton.setOnClickListener {
+            findNavController().navigate(R.id.homeFragment)
+        }
     }
 }

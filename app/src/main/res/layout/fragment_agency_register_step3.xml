@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:padding="15dp"
         android:layout_marginHorizontal="15dp">
 
@@ -207,7 +207,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="60dp"
             android:layout_marginBottom="40dp"
-            android:background="@drawable/shape_layer_button_disable"
+            android:background="@drawable/shape_layer_button"
             android:text="Next"
             android:textSize="20sp"
             android:fontFamily="@font/montserrat_bold"

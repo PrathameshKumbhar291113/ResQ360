@@ -269,7 +269,7 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="60dp"
             android:layout_marginBottom="40dp"
-            android:background="@drawable/shape_layer_button_disable"
+            android:background="@drawable/shape_layer_button"
             android:text="Next"
             android:textSize="20sp"
             android:fontFamily="@font/montserrat_bold"

@@ -7,7 +7,5 @@ import dagger.hilt.android.HiltAndroidApp
 class ResQ360Application : Application(){
     override fun onCreate() {
         super.onCreate()
-
-        //baics application
     }
 }

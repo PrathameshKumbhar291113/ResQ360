@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".features.main.auth.agency.register.AgencyRegisterFragmentStep3">
 
+<!--    TODO toggle icons are missing refer the login page-->
     <TextView
         android:id="@+id/topText"
         android:layout_width="match_parent"

@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".features.main.auth.agency.register.AgencyRegisterFragmentStep4">
-
+<!-- TODO remove the material text input layout-->
     <TextView
         android:id="@+id/topText"
         android:layout_width="match_parent"

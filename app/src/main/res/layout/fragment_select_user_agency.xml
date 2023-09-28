@@ -10,7 +10,7 @@
         android:id="@+id/selectRoleTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/montserrat_semibold"
         android:text="What role suits you the most?\nSelect your role"
         android:textAlignment="center"
@@ -23,33 +23,37 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/roleContainer"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="50dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nextBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/selectRoleTitle"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@id/selectRoleTitle">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/shape_card_on_board_gradient">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardAgency"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="20dp"
+                android:checkable="true"
                 android:clickable="true"
+                android:focusable="true"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="3dp"
+                app:checkedIcon="@drawable/ic_success"
+                app:checkedIconGravity="TOP_END"
+                app:checkedIconTint="@color/moderate_cyan"
                 app:layout_constraintBottom_toTopOf="@id/cardUser"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:rippleColor="#00ff0000">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/containerAgency"
@@ -84,21 +88,26 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardUser"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:checkable="true"
                 android:clickable="true"
+                android:focusable="true"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="3dp"
+                app:checkedIcon="@drawable/ic_success"
+                app:checkedIconGravity="TOP_END"
+                app:checkedIconTint="@color/moderate_cyan"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardAgency">
+                app:layout_constraintTop_toBottomOf="@id/cardAgency"
+                app:rippleColor="#00ff0000">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/containerUser"
@@ -133,10 +142,26 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_layer_button_disable"
+        android:text="Next"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roleContainer" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

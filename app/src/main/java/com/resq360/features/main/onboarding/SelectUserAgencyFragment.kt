@@ -31,10 +31,10 @@ class SelectUserAgencyFragment : Fragment() {
     }
 
     private fun setupUi() {
-        binding.agency.setOnClickListener {
+        binding.cardAgency.setOnClickListener {
             findNavController().navigate(R.id.agencyLoginFragment)
         }
-        binding.user.setOnClickListener {
+        binding.cardUser.setOnClickListener {
             findNavController().navigate(R.id.userLoginFragment)
         }
     }

@@ -151,10 +151,6 @@
                     android:paddingVertical="8dp"
                     android:paddingHorizontal="8dp"/>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/agencyLicenseIL"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/agencyLicenseET"
@@ -163,7 +159,6 @@
                         android:hint="Enter License"
                         android:fontFamily="@font/montserrat"
                         android:background="@drawable/shape_white_corner_5dp"/>
-                </com.google.android.material.textfield.TextInputLayout>
 
 
                 <TextView

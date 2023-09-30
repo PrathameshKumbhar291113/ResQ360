@@ -67,14 +67,10 @@ class UserLoginFragment : BaseFragment() {
     }
 
     private fun enableSubmitButton() {
-        binding.btnProceed.isClickable = true
-        binding.btnProceed.isEnabled = true
         binding.btnProceed.alpha = 1f
     }
 
     private fun disableSubmitButton() {
-        binding.btnProceed.isClickable = true
-        binding.btnProceed.isEnabled = true
         binding.btnProceed.alpha = .5f
     }
 }

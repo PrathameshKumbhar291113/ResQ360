@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.resq360.R
 import com.resq360.databinding.FragmentUserOtpVerificationBinding
@@ -45,7 +44,7 @@ class UserOtpVerificationFragment : BaseFragment() {
                 }
             }
         }
-        binding.btnSubmit.setOnClickListener {
+        binding.btnVerify.setOnClickListener {
             requireActivity().hideKeyboard()
             binding.userOtpEditText.text?.let {
                 if (it.isNullOrBlank() || it.isNullOrEmpty()){
@@ -64,11 +63,11 @@ class UserOtpVerificationFragment : BaseFragment() {
     }
 
     private fun enableSubmitButton() {
-        binding.btnSubmit.alpha = 1f
+        binding.btnVerify.alpha = 1f
     }
 
     private fun disableSubmitButton() {
-        binding.btnSubmit.alpha = .5f
+        binding.btnVerify.alpha = .5f
     }
 
 }

@@ -46,7 +46,7 @@ class UserLoginFragment : BaseFragment() {
             }
         }
 
-        binding.btnProceed.setOnClickListener {
+        binding.btnGetOtp.setOnClickListener {
             requireActivity().hideKeyboard()
             binding.userMobileNumberEditText.text?.let {
                 if (it.isNullOrEmpty() || it.isNullOrBlank()){
@@ -66,10 +66,10 @@ class UserLoginFragment : BaseFragment() {
     }
 
     private fun enableSubmitButton() {
-        binding.btnProceed.alpha = 1f
+        binding.btnGetOtp.alpha = 1f
     }
 
     private fun disableSubmitButton() {
-        binding.btnProceed.alpha = .5f
+        binding.btnGetOtp.alpha = .5f
     }
 }

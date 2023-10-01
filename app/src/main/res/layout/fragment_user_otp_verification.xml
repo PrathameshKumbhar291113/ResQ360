@@ -72,7 +72,7 @@
                     android:background="@drawable/shape_white_corner_5dp"
                     android:elevation="10dp"
                     android:hint="Enter Otp Here"
-                    android:maxLength="10"
+                    android:maxLength="6"
                     android:inputType="phone"
                     android:paddingHorizontal="4dp"
                     android:paddingVertical="8dp"

@@ -38,7 +38,7 @@ class UserOtpVerificationFragment : BaseFragment() {
             text?.let {
                 if (it.length<6){
                     disableSubmitButton()
-                }else if (it.length.equals(6)){
+                }else if (it.length == 6){
                     requireActivity().hideKeyboard()
                     enableSubmitButton()
                 }

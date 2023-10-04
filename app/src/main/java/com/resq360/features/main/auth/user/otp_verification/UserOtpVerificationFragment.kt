@@ -1,7 +1,6 @@
 package com.resq360.features.main.auth.user.otp_verification
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,11 +12,8 @@ import com.google.firebase.auth.PhoneAuthProvider
 import com.resq360.R
 import com.resq360.databinding.FragmentUserOtpVerificationBinding
 import com.resq360.features.base.BaseFragment
-import com.resq360.features.utils.BundleConstants
 import com.resq360.features.utils.hideKeyboard
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.tasks.await
-import splitties.fragmentargs.arg
 
 @AndroidEntryPoint
 class UserOtpVerificationFragment : BaseFragment() {
@@ -93,7 +89,7 @@ class UserOtpVerificationFragment : BaseFragment() {
         auth.signInWithCredential(credential).addOnCompleteListener(requireActivity()) { task ->
             if (task.isSuccessful) {
                 //api call to check if existing user or not
-                findNavController().navigate(R.id.homeFragment)
+                findNavController().navigate(R.id.userRegisterFragment)
             } else {
                 errorToast(task.exception?.message.toString())
             }

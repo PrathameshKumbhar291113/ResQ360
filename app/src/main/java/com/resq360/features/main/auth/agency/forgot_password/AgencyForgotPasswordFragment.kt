@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.resq360.databinding.FragmentAgencyForgotPasswordBinding
+import com.resq360.features.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class AgencyForgotPasswordFragment : Fragment() {
+class AgencyForgotPasswordFragment : BaseFragment() {
     private lateinit var binding: FragmentAgencyForgotPasswordBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,5 +21,21 @@ class AgencyForgotPasswordFragment : Fragment() {
     ): View{
         binding = FragmentAgencyForgotPasswordBinding.inflate(inflater,container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpUi()
+    }
+
+    private fun setUpUi() {
+        binding.btnSubmit.setOnClickListener {
+            if (binding.userRestorePasswordEditText.text.isNullOrBlank() || binding.userRestorePasswordEditText.text.isNullOrEmpty()){
+                //TODO make api call
+            }else{
+                errorToast("Email cannot be empty.")
+            }
+        }
     }
 }

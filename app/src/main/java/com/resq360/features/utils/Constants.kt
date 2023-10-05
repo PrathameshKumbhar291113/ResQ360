@@ -12,3 +12,7 @@ object InputFilters {
         source?.filter { char -> char.isLetterOrDigit() || char =='@' || char == '.' }
     }
 }
+
+object BundleConstants{
+    const val verificationId = "verficationId"
+}

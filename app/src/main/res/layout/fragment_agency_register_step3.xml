@@ -121,7 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         app:cardElevation="4dp"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="15dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -158,6 +158,8 @@
                     android:elevation="10dp"
                     android:stateListAnimator="@null"
                     android:textSize="16sp"
+                    android:drawableEnd="@drawable/iv_visibility_off"
+                    android:drawablePadding="5dp"
                     android:textColor="@color/palate_big_stone"
                     android:textColorHint="@color/very_dark_blue" />
                 <TextView
@@ -184,6 +186,8 @@
                     android:elevation="10dp"
                     android:textSize="16sp"
                     android:stateListAnimator="@null"
+                    android:drawableEnd="@drawable/iv_visibility_off"
+                    android:drawablePadding="5dp"
                     android:textColor="@color/palate_big_stone"
                     android:textColorHint="@color/very_dark_blue" />
 

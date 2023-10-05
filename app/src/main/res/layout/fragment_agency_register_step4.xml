@@ -128,7 +128,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         app:cardElevation="4dp"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="15dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -154,9 +154,17 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/agencyLicenseET"
+                        android:layout_gravity="center_vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Enter License"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginTop="8dp"
+                        android:elevation="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/palate_big_stone"
+                        android:textColorHint="@color/very_dark_blue"
                         android:fontFamily="@font/montserrat"
                         android:background="@drawable/shape_white_corner_5dp"/>
 

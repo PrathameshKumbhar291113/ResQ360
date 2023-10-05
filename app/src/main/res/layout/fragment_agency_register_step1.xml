@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".features.main.auth.agency.register.AgencyRegisterFragmentStep1">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/topText"
         android:layout_width="match_parent"
@@ -145,8 +144,6 @@
                             android:text="Agency Name"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
-
-                        <!--TODO remove all the material text input layout -->
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/agencyNameET"

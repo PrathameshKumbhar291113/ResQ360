@@ -1,14 +1,313 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
     tools:context=".features.main.auth.agency.register.AgencyRegisterFragmentStep1">
 
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/register_your_agency"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/step1"-->
+        <!--                android:layout_width="30dp"-->
+        <!--                android:layout_height="30dp"-->
+        <!--                android:padding="5dp"-->
+        <!--                android:src="@drawable/ic_success"-->
+        <!--                android:background="@drawable/done" />-->
+
+        <TextView
+            android:id="@+id/step1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/in_progress"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:background="@drawable/in_progress_line_shape" />
+
+        <TextView
+            android:id="@+id/step2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/in_progress"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:text="2"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:background="@drawable/in_progress_line_shape" />
+
+        <TextView
+            android:id="@+id/step3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/in_progress"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:text="3"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:background="@drawable/in_progress_line_shape" />
+
+        <TextView
+            android:id="@+id/step4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/in_progress"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:text="4"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:padding="4dp"
+        android:text="@string/add_information"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="4dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_card_gradient"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="8dp"
+                            android:text="Agency Name"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/agencyNameET"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_white_corner_5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:hint="Eg. Earthquake Relief"
+                            android:padding="4dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="8dp"
+                            android:text="Type of Organization"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/orgET"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_white_corner_5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:padding="4dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="8dp"
+                            android:text="Agency ID"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/agencyIDET"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_white_corner_5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:padding="4dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="8dp"
+                            android:text="Agency Email ID"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/agencyEmailET"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:inputType="textEmailAddress"
+                            android:importantForAccessibility="yes"
+                            android:background="@drawable/shape_white_corner_5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:padding="4dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="8dp"
+                            android:text="Agency Tollfree Number"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/agencyNumberET"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shape_white_corner_5dp"
+
+                            android:fontFamily="@font/montserrat"
+                            android:hint="Eg. 922341234"
+                            android:padding="4dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="8dp"
+                            android:text="Agency Address"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/upload_image"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="8dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_location" />
+
+                            <TextView
+                                android:id="@+id/agencyAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:text="Click to Auto Detect Location"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/agencyAddressET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_white_corner_5dp"
+                            android:fontFamily="@font/montserrat"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/nextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/shape_layer_button"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

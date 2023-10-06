@@ -8,4 +8,8 @@
     </style>
 
     <style name="Theme.ResQ360" parent="Base.Theme.ResQ360" />
+
+    <style name="CardView." parent="CardView">
+        <item name="android:foreground">@drawable/shape_card_gradient</item>
+    </style>
 </resources>

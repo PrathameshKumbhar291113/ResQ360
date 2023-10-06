@@ -206,6 +206,8 @@
                             android:id="@+id/agencyEmailET"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
+                            android:inputType="textEmailAddress"
+                            android:importantForAccessibility="yes"
                             android:background="@drawable/shape_white_corner_5dp"
                             android:fontFamily="@font/montserrat"
                             android:padding="4dp" />

@@ -20,6 +20,8 @@ import android.util.Log
 import androidx.core.app.ActivityCompat
 import com.resq360.R
 import com.resq360.databinding.FragmentAgencyRegisterStep1Binding
+import com.resq360.features.utils.isValidEmail
+import com.resq360.features.utils.isValidPhoneNumber
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.IOException
 import java.util.*
@@ -79,14 +81,12 @@ class AgencyRegisterFragmentStep1 : Fragment() {
             if (location != null) {
                 val latitude = location.latitude
                 val longitude = location.longitude
-                // You can use latitude and longitude for your purposes
-                // For example, display it on the screen or send it to a server
                 Log.d("Location", location.toString())
                 try {
                     val addresses: List<Address> =
                         geocoder.getFromLocation(latitude, longitude, 1) as List<Address>
                     if (addresses.isNotEmpty()) {
-                        val locationName = addresses[0].getAddressLine(0) // Get the first address line
+                        val locationName = addresses[0].getAddressLine(0)
                         binding.agencyAddress.text = locationName
                     }
                 } catch (e: IOException) {
@@ -94,8 +94,6 @@ class AgencyRegisterFragmentStep1 : Fragment() {
                 }
             }
         }.addOnFailureListener { e ->
-            // Handle any errors that occurred while trying to fetch the location
-            // You can display a message to the user or try again
             Log.e("Error in Auto Detecting Location", "Please try again later")
         }
     }
@@ -106,17 +104,33 @@ class AgencyRegisterFragmentStep1 : Fragment() {
     private fun setupUi() {
 
         binding.nextButton.setOnClickListener {
-            findNavController().navigate(R.id.agencyRegisterFragmentStep2)
+            val agencyName = binding.agencyNameET.text.toString()
+            val agencyOrg = binding.orgET.text.toString()
+            val agencyID = binding.agencyIDET.text.toString()
+            val agencyAddress = binding.agencyAddress.text.toString()
+
+            if(agencyName.isNotEmpty() && agencyOrg.isNotEmpty() && agencyID.isNotEmpty() && validateEmail() && validatePhoneNumber() && agencyAddress.isNotEmpty())
+                findNavController().navigate(R.id.agencyRegisterFragmentStep2)
+            else
+                Toast.makeText(requireContext(), "All fields are mandatory", Toast.LENGTH_SHORT).show()
         }
 
         binding.agencyAddress.setOnClickListener {
             if (isLocationPermissionGranted()) {
-                // Permission is granted, proceed with location detection
                 requestLocation()
             } else {
-                // Permission is not granted, request it from the user
                 requestLocationPermission()
             }
         }
+    }
+
+    private fun validateEmail(): Boolean {
+        val email = binding.agencyEmailET.text.toString()
+        return isValidEmail(email)
+    }
+
+    private fun validatePhoneNumber(): Boolean {
+        val email = binding.agencyNumberET.text.toString()
+        return isValidPhoneNumber(email)
     }
 }

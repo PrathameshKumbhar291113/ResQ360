@@ -36,6 +36,11 @@
         android:label="fragment_agency_register_step4"
         tools:layout="@layout/fragment_agency_register_step4" />
     <fragment
+        android:id="@+id/submitFragment"
+        android:name="com.resq360.features.main.auth.agency.register.SubmitFragment"
+        android:label="fragment_submit_register"
+        tools:layout="@layout/fragment_submit" />
+    <fragment
         android:id="@+id/selectUserAgencyFragment"
         android:name="com.resq360.features.main.onboarding.SelectUserAgencyFragment"
         android:label="fragment_select_user_agency"

@@ -3,14 +3,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp">
+    android:background="@drawable/shape_white_corner_5dp"
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/agencyName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mumbai Fire Department"
-        android:fontFamily="@font/montserrat_semibold"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginVertical="5dp"
         android:textSize="20sp"
         />
 
@@ -19,8 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="0000-1230456"
-        android:fontFamily="@font/montserrat"
+        android:fontFamily="@font/montserrat_semibold"
         android:textSize="16sp"
+        android:layout_marginBottom="10dp"
         android:textColor="@color/grey"
         />
 
@@ -32,23 +35,21 @@
 
         <TextView
             android:id="@+id/distance"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="3 kms away"
             android:fontFamily="@font/montserrat_semibold"
             android:textSize="16sp"
-            android:textColor="@color/grey"
+            android:textColor="@color/strong_green"
             />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/contactNowButton"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="40dp"
+            android:padding="5dp"
             android:background="@drawable/field_selected_shape"
             android:fontFamily="@font/montserrat_bold"
             android:text="Contact Now"

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.resq360.R
 import com.resq360.features.utils.Agency
 
@@ -36,6 +37,17 @@ class AgencyAdapter(private val context: Context, private val agencyList: List<A
         agencyNameTV.text = agency.agencyName
         agencyNumberTV.text = agency.agencyNumber
         distanceTV.text = agency.distance
+
+        val strDist = distanceTV.text.toString().substring(0, 2).trim()
+        val intDist = strDist.toInt()
+
+        if(intDist <= 5) {
+            distanceTV.setTextColor(ContextCompat.getColor(context, R.color.strong_green))
+        } else if(intDist in 6..10) {
+            distanceTV.setTextColor(ContextCompat.getColor(context, R.color.yellow))
+        } else if(intDist > 10) {
+            distanceTV.setTextColor(ContextCompat.getColor(context, R.color.orange))
+        }
 
         return view
     }

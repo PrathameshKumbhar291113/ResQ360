@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
         val agencies = listOf(Agency("Mumbai Fire Department", "0000-1230456", "3 kms away"),
             Agency("Police Department", "0000-1530496", "5 kms away"),
             Agency("Mumbai Medical Department", "0000-1478956", "10 kms away"),
-            Agency("National Disaster Management Authority", "0000-1220466", "8.5 kms away"),
+            Agency("National Disaster Management Authority", "0000-1220466", "8 kms away"),
             Agency("District Disaster Management Authority", "0000-1260446", "4 kms away"),
             Agency("Mumbai Police Department", "0000-1335656", "80 kms away"),
             Agency("Ambulance Department", "0000-1450786", "90 kms away"),

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_corner_5dp"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/agencyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mumbai Fire Department"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/very_dark_blue"
+        android:layout_marginVertical="5dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/agencyNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0000-1230456"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/grey_dark"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3 kms away"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textSize="16sp"
+            android:textColor="@color/strong_green"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/contactNowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/field_selected_shape"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Contact Now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

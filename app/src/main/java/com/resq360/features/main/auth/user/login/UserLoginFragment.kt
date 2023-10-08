@@ -19,8 +19,7 @@ import com.resq360.R
 import com.resq360.databinding.FragmentUserLoginBinding
 import com.resq360.features.base.BaseFragment
 import com.resq360.features.main.auth.user.otp_verification.UserOtpVerificationFragment
-import com.resq360.features.utils.BundleConstants
-import com.resq360.features.utils.hideKeyboard
+import com.resq360.utils.hideKeyboard
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.TimeUnit
 

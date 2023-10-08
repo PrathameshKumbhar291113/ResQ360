@@ -40,6 +40,7 @@
     <color name="palate_titan_white">#F8F7FF</color>
     <color name="palate_big_stone">#14213D</color>
     <color name="palate_havelock_blue">#4D7EDD</color>
+    <color name="dark_blue_shade">#176B87</color>
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#14213D</color>
 

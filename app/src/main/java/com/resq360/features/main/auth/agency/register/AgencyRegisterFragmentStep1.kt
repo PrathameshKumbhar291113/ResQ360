@@ -1,30 +1,29 @@
 package com.resq360.features.main.auth.agency.register
 
+import android.Manifest
 import android.content.pm.PackageManager
+import android.location.Address
+import android.location.Geocoder
+import android.location.Location
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import android.Manifest
-import android.annotation.SuppressLint
-import android.location.Address
-import android.location.Geocoder
-import android.location.Location
-import android.util.Log
-import androidx.core.app.ActivityCompat
 import com.resq360.R
 import com.resq360.databinding.FragmentAgencyRegisterStep1Binding
-import com.resq360.features.utils.isValidEmail
-import com.resq360.features.utils.isValidPhoneNumber
+import com.resq360.utils.isValidEmail
+import com.resq360.utils.isValidPhoneNumber
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.IOException
-import java.util.*
+import java.util.Locale
 
 @AndroidEntryPoint
 class AgencyRegisterFragmentStep1 : Fragment() {

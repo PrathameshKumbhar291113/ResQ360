@@ -47,7 +47,7 @@
         tools:layout="@layout/fragment_select_user_agency" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.resq360.features.main.home.HomeFragment"
+        android:name="com.resq360.features.main.home.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment

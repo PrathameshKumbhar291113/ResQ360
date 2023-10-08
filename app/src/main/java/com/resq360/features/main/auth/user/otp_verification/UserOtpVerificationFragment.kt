@@ -12,7 +12,7 @@ import com.google.firebase.auth.PhoneAuthProvider
 import com.resq360.R
 import com.resq360.databinding.FragmentUserOtpVerificationBinding
 import com.resq360.features.base.BaseFragment
-import com.resq360.features.utils.hideKeyboard
+import com.resq360.utils.hideKeyboard
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

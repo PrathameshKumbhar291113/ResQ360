@@ -7,15 +7,87 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
     tools:openDrawer="start"
-    tools:context=".features.main.home.HomeFragment">
+    tools:context=".features.main.home.fragments.HomeFragment">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navDrawerNavigationView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="false"
+        app:headerLayout="@layout/inc_drawer_header_layout"
+        android:background="@drawable/shape_drawer_gradient"
+        app:menu="@menu/home_menu"
         app:itemIconSize="20dp">
+
+        <!-- <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dataOfAgencyArrival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lastReportedActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Last Reported Activity"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/very_dark_blue"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ListView
+                android:id="@+id/lastReportedList"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toTopOf="@id/agencyArrivalTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastReportedActivity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/agencyArrivalTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginVertical="30dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Agency Arrival Estimated Time:"
+                android:textColor="@color/very_dark_blue"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastReportedList" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout> -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/logoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_gravity="bottom">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/logoutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/field_selected_shape"
+                android:text="Log Out"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </com.google.android.material.navigation.NavigationView>
 
@@ -34,7 +106,6 @@
             android:id="@+id/agencyList"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

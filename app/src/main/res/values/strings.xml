@@ -7,4 +7,7 @@
     <string name="register_your_agency">Register Your Agency</string>
     <string name="add_information">Add Information</string>
     <string name="agency_name">Agency Name</string>
+    <string name="lbl_swipe_to_call">Swipe To Call</string>
+    <string name="nav_drawer_open" translatable="false">Open Drawer</string>
+    <string name="nav_drawer_close" translatable="false">Close Drawer</string>
 </resources>

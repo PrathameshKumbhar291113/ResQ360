@@ -1,4 +1,4 @@
-package com.resq360.features.utils
+package com.resq360.utils
 
 import android.app.Activity
 import android.content.Context

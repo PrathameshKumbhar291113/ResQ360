@@ -14,6 +14,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.resq360.R
@@ -32,7 +33,6 @@ class HomeFragment : BaseFragment() {
     private lateinit var navigationView: NavigationView
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
-
     private lateinit var auth: FirebaseAuth
 
     companion object {
@@ -52,7 +52,6 @@ class HomeFragment : BaseFragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         auth = FirebaseAuth.getInstance()
-//        auth.signOut()
         return binding.root
     }
 
@@ -62,8 +61,22 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setupUi() {
-        checkPermission()
 
+        checkPermission()
+        setUpListView()
+        setUpNavDrawer()
+        setupLogout()
+
+    }
+
+    private fun setupLogout() {
+        binding.logoutBtn.setOnClickListener {
+            auth.signOut()
+            findNavController().navigate(R.id.splashFragment)
+        }
+    }
+
+    private fun setUpListView() {
         val agencies = listOf(
             Agency(
                 "Mumbai Fire Department",
@@ -117,10 +130,6 @@ class HomeFragment : BaseFragment() {
         agencyAdapter = AgencyAdapter(requireContext(), agencies, this::onItemClick)
 
         binding.agencyList.adapter = agencyAdapter
-
-        setUpNavDrawer()
-
-
     }
 
     private fun setUpNavDrawer() {
